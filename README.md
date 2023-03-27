@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Integração com APIs I - Exercício
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Caso não lembre como funciona o processo de entrega, clique [**aqui**](https://github.com/labenuexercicios/instrucoes-entrega)
 
-## Available Scripts
+## O que você precisa saber e praticar desta aula?
+1. Integração de API usando o axios
+2. Uso de hooks (useState e useEffect)
+3. Consumo de API Rest (métodos get/post/put/delete)
+4. Sintaxe `.then()` e `.catch()`
 
-In the project directory, you can run:
+## Como eu vou executar os exercícios?
 
-### `npm start`
+Vamos utilizar a API do Labefy, vista na aula anterior para fazer os exercícios de hoje. Neste exercício, vamos mudar a lista de músicas que está sendo consumida local para a lista que se encontra na **API**.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Para executar este exercício, você pode criar uma nova aplicação React, como foi visto na aula passada, ou utilizar o link abaixo para ir ao template no **CodeSandbox**. Este template para exatamente onde o exercício da última aula acaba.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[**Template do CodeSandbox**](https://codesandbox.io/s/integracao-api-i-exercicio-gexiie)
 
-### `npm test`
+Caso queira criar uma nova aplicação React, basta copiar os conteúdos deste repositório e colar dentro da pasta do seu projeto criado.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# API Labefy
+[**Link da documentação**](https://documenter.getpostman.com/view/7549981/SztBc8eT?version=latest)
 
-### `npm run build`
+Você recebeu este projeto em andamento. Já tem um pouco de estilização nele, assim como os componentes criados. Sua primeira tarefa é ler o código e procurar entender em qual parte dele precisará aplicar as requisições.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para iniciar, você pode usar playlists criadas nesta mesma API a partir do Postman.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Exercício 1
+Primeiramente leia a documentação da API, para entender o que cada endpoint **precisa** para ser consumido e **fornece** como resposta. Dados, headers, parâmetros, etc.
 
-### `npm run eject`
+# Exercício 2
+Para iniciar no código, iremos mudar o arquivo `Playlists.js`. Atualmente as playlists estão como dados mockados no arquivo, mas precisamos que elas venham da API. Altere a origem das playlists.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Lembre-se de instalar o `axios`, e importá-lo quando for necessário.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Exercício 3
+ Agora que já conseguimos consumir as playlists da API, vamos modificar as músicas. Elas também estão como dados mockados e precisam vir da API.
+ Atenção para este endpoint: como a API sabe de qual playlist estamos importando as músicas?
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Não inicie os exercícios a seguir antes de ter conseguido resolver os 3 acima!
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Exercício 4
+ Já possuímos os dados vindos da API, mas agora precisamos criar uma função para enviar novas músicas para cada playlist.
+ (caso prefira, você pode utilizar o link http://spoti4.future4.com.br/1.mp3, mudando apenas o número de cada música, de 1 a 98)
 
-## Learn More
+# Exercício 5
+ Para finalizar, precisamos criar uma função para remover as músicas de uma playlist (note que já temos um botão no layout para isso, marcado com `x` ao lado de cada música)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Informações úteis sobre o assunto
+1. [Axios (documentação)](https://axios-http.com/docs/intro)
+2. [Promise (MDN)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+3. [Usando Promises (MDN)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Using_promises)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
